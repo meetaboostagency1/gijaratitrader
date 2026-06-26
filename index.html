@@ -1,224 +1,256 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ROCHIT SINGH™</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#0b6eb8,#18c13d);
+    font-family:'Oxanium',sans-serif;
+    background:url('https://i.ibb.co/7x4vqZqd/image.jpg') no-repeat center center/cover;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow:hidden;
+    position:relative;
 }
 
-/* Main Container */
-
-.sio-main-container{
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:20px;
+/* Dark Overlay */
+body::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:0;
 }
 
-/* Card */
-
-.sio-landing-wrap{
-max-width:520px;
-width:100%;
-text-align:center;
-background:#fff;
-padding:30px 25px;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
+/* Main Box */
+.glass-box{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:420px;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:22px;
+    padding:35px 28px;
+    text-align:center;
+    box-shadow:0 0 35px rgba(0,0,0,0.45);
+    animation:fadeIn 1s ease;
 }
 
-/* Pulse Animation */
-
-@keyframes pulse-blue{
-0%{box-shadow:0 0 0 0 rgba(11,110,184,.7)}
-70%{box-shadow:0 0 0 18px rgba(11,110,184,0)}
-100%{box-shadow:0 0 0 0 rgba(11,110,184,0)}
+/* Logo */
+.logo-img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #ffdb4d;
+    box-shadow:0 0 22px #ffdb4d;
+    margin-bottom:20px;
+    animation:float 3s ease-in-out infinite;
 }
 
-/* Button */
-
-.sio-btn{
-display:block;
-width:100%;
-background:linear-gradient(45deg,#0b6eb8,#0a8be0);
-color:#fff;
-padding:16px;
-font-size:16px;
-font-weight:700;
-border-radius:50px;
-text-decoration:none;
-margin:15px 0;
-transition:.3s;
-animation:pulse-blue 2s infinite;
+/* Title */
+.title{
+    font-size:32px;
+    font-weight:700;
+    color:#ffdb4d;
+    text-shadow:0 0 18px #ffdb4d;
+    margin-bottom:8px;
 }
 
-.sio-btn:hover{
-transform:scale(1.05);
-background:linear-gradient(45deg,#095c9d,#0b6eb8);
+/* Subtitle */
+.sub-title{
+    font-size:18px;
+    color:#ffe26f;
+    margin-bottom:25px;
+    text-shadow:0 0 10px #000;
 }
 
-/* Profile */
-
-.sio-profile{
-margin:20px 0;
+/* Join Button */
+.join-btn{
+    display:block;
+    width:100%;
+    padding:16px 0;
+    border-radius:14px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    color:#fff;
+    background:linear-gradient(90deg,#0088cc,#00a8ff);
+    box-shadow:0 0 16px #00a8ff;
+    transition:0.3s;
+    animation:pulse 1.7s infinite;
+    margin-bottom:22px;
 }
 
-.sio-avatar{
-width:110px;
-height:110px;
-margin:auto;
-border-radius:50%;
-overflow:hidden;
-border:4px solid #fff;
-box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
-
-.sio-avatar img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.sio-headline{
-margin-top:12px;
-font-size:24px;
-font-weight:800;
-color:#18c13d;
-}
-
-/* Features */
-
-.sio-features{
-margin-top:10px;
-}
-
-.sio-feature{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-margin:8px 0;
-}
-
-.sio-feature p{
-font-weight:600;
-color:#333;
-}
-
-.sio-tick{
-width:24px;
-height:24px;
-border-radius:50%;
-background:#eaf7ea;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:800;
-color:#18c13d;
-font-size:14px;
+.join-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 28px #00c2ff;
 }
 
 /* Highlight */
-
-.sio-highlight{
-margin:18px 0;
-padding:10px;
-background:#f1f8ff;
-border-radius:10px;
-font-weight:700;
-color:#0b6eb8;
+.highlight{
+    display:inline-block;
+    padding:8px 14px;
+    border:1px solid #ffdb4d;
+    border-radius:8px;
+    color:#ffdb4d;
+    font-size:15px;
+    margin-bottom:18px;
+    box-shadow:0 0 12px rgba(255,219,77,0.45);
 }
 
-/* Disclaimer */
-
-.sio-disclaimer{
-margin-top:20px;
-font-size:11px;
-color:#777;
-line-height:1.4;
+/* Text */
+.info{
+    color:#fff;
+    text-shadow:0 0 8px #000;
+    font-size:16px;
+    margin:8px 0;
 }
 
-/* Mobile */
+/* Footer */
+footer{
+    margin-top:18px;
+    font-size:12px;
+    color:#ccc;
+}
 
+/* Ads Box */
+.ads-box{
+    margin-top:18px;
+    background:linear-gradient(135deg,#4f46e5,#9333ea,#ec4899);
+    padding:10px 14px;
+    border-radius:12px;
+    display:inline-block;
+    font-family:'Poppins',sans-serif;
+    font-size:13px;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.15);
+    animation:glow 2s infinite alternate;
+    box-shadow:0 3px 12px rgba(0,0,0,0.3);
+}
+
+.ads-box a{
+    color:#6cb6ff;
+    text-decoration:none;
+    font-weight:700;
+    margin:0 4px;
+    border-bottom:1px solid rgba(108,182,255,0.6);
+    text-shadow:0 0 6px #6cb6ff;
+}
+
+/* Animations */
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(0.94);}
+    100%{transform:scale(1);}
+}
+
+@keyframes glow{
+    from{box-shadow:0 0 8px #9333ea;}
+    to{box-shadow:0 0 16px #ec4899;}
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-6px);}
+    100%{transform:translateY(0px);}
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile Responsive */
 @media(max-width:480px){
 
-.sio-btn{
-font-size:14px;
-padding:14px;
-}
+    .glass-box{
+        padding:28px 20px;
+    }
 
-.sio-headline{
-font-size:21px;
-}
+    .title{
+        font-size:28px;
+    }
 
-.sio-feature p{
-font-size:13px;
-}
+    .sub-title{
+        font-size:16px;
+    }
+
+    .join-btn{
+        font-size:17px;
+    }
 
 }
-
 </style>
+</head>
 
-<div class="sio-main-container">
+<body>
 
-<div class="sio-landing-wrap">
+<div class="glass-box">
 
-<a class="sio-btn" href="https://t.me/+RC792uAhGXs4YjE9" target="_blank">
-JOIN TELEGRAM CHANNEL 🚀
-</a>
+    <!-- Logo -->
+    <img src="https://i.ibb.co/5gngmMtL/cropped-circle-image-4.png" class="logo-img" alt="Logo">
 
-<div class="sio-profile">
+    <!-- Title -->
+    <div class="title">ROCHIT SINGH™</div>
 
-<div class="sio-avatar">
-<img src="https://i.ibb.co/KjrBVv9h/mr88-B4-MCQeolto-Xob-M9-JEe-Eyn-ZMn-Bj-FMz-Ac0-SMDAi-h-Ff1-Qg-RBAkl-Xo7yo-Kxe-N-POtqpyfq-Ow-Kv-VPc-Ao-I-I.jpg">
-</div>
+    <!-- Subtitle -->
+    <div class="sub-title">
+        📊 Stock Market Learning Community
+    </div>
 
-<div class="sio-headline">
-Work From Home Handwriting Job
-</div>
+    <!-- Telegram Button -->
+    <a href="https://t.me/+WhqGDLuClig1NDM1" target="_blank" class="join-btn">
+        🚀 Join Our Telegram Group
+    </a>
 
-</div>
+    <!-- Highlight -->
+    <div class="highlight">
+        🔥 India's Trusted Learning Group
+    </div>
 
-<div class="sio-features">
+    <!-- Content -->
+    <div class="info">🎯 Live Educational Sessions</div>
+    <div class="info">📘 Learn Stocks • Indices • Concepts</div>
+    <div class="info">🚀 Join Free Community Today</div>
 
-<div class="sio-feature">
-<div class="sio-tick">✓</div>
-<p>Simple Writing Work – No Experience Needed</p>
-</div>
+    <!-- Footer -->
+    <footer>
+        Educational purpose only. No investment advice.
+    </footer>
 
-<div class="sio-feature">
-<div class="sio-tick">✓</div>
-<p>Earn ₹15,000 – ₹30,000 Per Month</p>
-</div>
-
-<div class="sio-feature">
-<div class="sio-tick">✓</div>
-<p>Work From Home • Flexible Timing</p>
-</div>
-
-<div class="sio-highlight">
-Limited Seats Available – Apply Today! 🚀
-</div>
-
-</div>
-
-<a class="sio-btn" href="https://t.me/+RC792uAhGXs4YjE9" target="_blank">
-JOIN TELEGRAM CHANNEL 🚀
-</a>
-
-<div class="sio-disclaimer">
-<b style="color:#0a7a3a">Note:</b> This is project-based work. 
-Earnings depend on performance and submission quality.
-</div>
+    <!-- Ads Box -->
+    <div class="ads-box">
+        🔥 Ads by
+        <a href="https://t.me/+k-z6FWZrh_RjYzBl" target="_blank">
+            AD Agency
+        </a>
+        • Instant Growth 🚀
+    </div>
 
 </div>
 
-</div>
+</body>
+</html>
