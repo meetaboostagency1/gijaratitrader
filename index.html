@@ -4,251 +4,217 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ROCHIT SINGH™</title>
+<title>Trade With Munaaf</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family:'Oxanium',sans-serif;
-    background:url('https://i.ibb.co/7x4vqZqd/image.jpg') no-repeat center center/cover;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    overflow:hidden;
-    position:relative;
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#fff;
 }
 
-/* Dark Overlay */
-body::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.45);
-    z-index:0;
+/* CARD */
+
+.container{
+width:95%;
+max-width:420px;
+padding:30px 25px;
+border-radius:18px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+text-align:center;
 }
 
-/* Main Box */
-.glass-box{
-    position:relative;
-    z-index:2;
-    width:100%;
-    max-width:420px;
-    background:rgba(0,0,0,0.55);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.18);
-    border-radius:22px;
-    padding:35px 28px;
-    text-align:center;
-    box-shadow:0 0 35px rgba(0,0,0,0.45);
-    animation:fadeIn 1s ease;
+/* LOGO */
+
+.logo{
+width:80px;
+height:80px;
+border-radius:50%;
+border:2px solid #FFD700;
+margin-bottom:12px;
 }
 
-/* Logo */
-.logo-img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #ffdb4d;
-    box-shadow:0 0 22px #ffdb4d;
-    margin-bottom:20px;
-    animation:float 3s ease-in-out infinite;
+/* TEXT */
+
+h1{
+font-size:22px;
+color:#FFD700;
+margin-bottom:6px;
 }
 
-/* Title */
-.title{
-    font-size:32px;
-    font-weight:700;
-    color:#ffdb4d;
-    text-shadow:0 0 18px #ffdb4d;
-    margin-bottom:8px;
+h2{
+font-size:15px;
+opacity:0.9;
+margin-bottom:10px;
 }
 
-/* Subtitle */
-.sub-title{
-    font-size:18px;
-    color:#ffe26f;
-    margin-bottom:25px;
-    text-shadow:0 0 10px #000;
+.sub{
+font-size:13px;
+opacity:0.7;
+margin-bottom:18px;
 }
 
-/* Join Button */
-.join-btn{
-    display:block;
-    width:100%;
-    padding:16px 0;
-    border-radius:14px;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:700;
-    color:#fff;
-    background:linear-gradient(90deg,#0088cc,#00a8ff);
-    box-shadow:0 0 16px #00a8ff;
-    transition:0.3s;
-    animation:pulse 1.7s infinite;
-    margin-bottom:22px;
+/* BUTTON */
+
+.btn{
+display:block;
+text-decoration:none;
+background:#22c55e;
+color:#000;
+font-weight:700;
+padding:16px;
+border-radius:10px;
+margin:12px 0;
+transition:0.3s;
 }
 
-.join-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 28px #00c2ff;
+.btn:hover{
+background:#16a34a;
+transform:scale(1.03);
 }
 
-/* Highlight */
-.highlight{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid #ffdb4d;
-    border-radius:8px;
-    color:#ffdb4d;
-    font-size:15px;
-    margin-bottom:18px;
-    box-shadow:0 0 12px rgba(255,219,77,0.45);
+/* TRUST BOX */
+
+.trust{
+background:rgba(0,255,150,0.08);
+padding:10px;
+border-radius:10px;
+font-size:13px;
+margin-bottom:15px;
+border:1px solid rgba(0,255,150,0.2);
 }
 
-/* Text */
-.info{
-    color:#fff;
-    text-shadow:0 0 8px #000;
-    font-size:16px;
-    margin:8px 0;
+/* LIST */
+
+.points{
+list-style:none;
+font-size:14px;
+text-align:left;
+margin:15px 0;
 }
 
-/* Footer */
-footer{
-    margin-top:18px;
-    font-size:12px;
-    color:#ccc;
+.points li{
+margin:8px 0;
 }
 
-/* Ads Box */
-.ads-box{
-    margin-top:18px;
-    background:linear-gradient(135deg,#4f46e5,#9333ea,#ec4899);
-    padding:10px 14px;
-    border-radius:12px;
-    display:inline-block;
-    font-family:'Poppins',sans-serif;
-    font-size:13px;
-    color:#fff;
-    border:1px solid rgba(255,255,255,0.15);
-    animation:glow 2s infinite alternate;
-    box-shadow:0 3px 12px rgba(0,0,0,0.3);
+/* URGENCY */
+
+.timer{
+margin-top:10px;
+font-size:13px;
+color:#facc15;
 }
 
-.ads-box a{
-    color:#6cb6ff;
-    text-decoration:none;
-    font-weight:700;
-    margin:0 4px;
-    border-bottom:1px solid rgba(108,182,255,0.6);
-    text-shadow:0 0 6px #6cb6ff;
+/* SOCIAL PROOF */
+
+.proof{
+margin-top:12px;
+font-size:12px;
+opacity:0.7;
 }
 
-/* Animations */
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(0.94);}
-    100%{transform:scale(1);}
+/* FOOTER BRAND */
+
+.footer{
+margin-top:20px;
+font-size:12px;
+opacity:0.6;
 }
 
-@keyframes glow{
-    from{box-shadow:0 0 8px #9333ea;}
-    to{box-shadow:0 0 16px #ec4899;}
+.footer a{
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
 }
 
-@keyframes float{
-    0%{transform:translateY(0px);}
-    50%{transform:translateY(-6px);}
-    100%{transform:translateY(0px);}
+.footer a:hover{
+text-decoration:underline;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+/* RISK */
+
+.risk{
+margin-top:10px;
+font-size:11px;
+opacity:0.5;
 }
 
-/* Mobile Responsive */
-@media(max-width:480px){
-
-    .glass-box{
-        padding:28px 20px;
-    }
-
-    .title{
-        font-size:28px;
-    }
-
-    .sub-title{
-        font-size:16px;
-    }
-
-    .join-btn{
-        font-size:17px;
-    }
-
-}
 </style>
 </head>
 
 <body>
 
-<div class="glass-box">
+<div class="container">
 
-    <!-- Logo -->
-    <img src="https://i.ibb.co/5gngmMtL/cropped-circle-image-4.png" class="logo-img" alt="Logo">
+<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
 
-    <!-- Title -->
-    <div class="title">ROCHIT SINGH™</div>
+<h1>TRADE WITH MUNAAF</h1>
+<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
 
-    <!-- Subtitle -->
-    <div class="sub-title">
-        📊 Stock Market Learning Community
-    </div>
+<p class="sub">
+Daily Intraday Trading Signals & Analysis
+</p>
 
-    <!-- Telegram Button -->
-    <a href="https://t.me/+WhqGDLuClig1NDM1" target="_blank" class="join-btn">
-        🚀 Join Our Telegram Group
-    </a>
+<!-- TOP BUTTON -->
+<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
+🚀 Join Free Telegram Channel
+</a>
 
-    <!-- Highlight -->
-    <div class="highlight">
-        🔥 India's Trusted Learning Group
-    </div>
+<div class="trust">
+✔ Trusted by 5,000+ Traders <br>
+✔ Daily Consistent Setups
+</div>
 
-    <!-- Content -->
-    <div class="info">🎯 Live Educational Sessions</div>
-    <div class="info">📘 Learn Stocks • Indices • Concepts</div>
-    <div class="info">🚀 Join Free Community Today</div>
+<ul class="points">
+<li>✔ 5–7 High Probability Trades</li>
+<li>✔ Exact Entry, SL & Target</li>
+<li>✔ Beginner Friendly Guidance</li>
+<li>✔ Live Market Updates</li>
+</ul>
 
-    <!-- Footer -->
-    <footer>
-        Educational purpose only. No investment advice.
-    </footer>
+<!-- BOTTOM BUTTON -->
+<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
+🚀 Join Free Telegram Channel
+</a>
 
-    <!-- Ads Box -->
-    <div class="ads-box">
-        🔥 Ads by
-        <a href="https://t.me/+k-z6FWZrh_RjYzBl" target="_blank">
-            AD Agency
-        </a>
-        • Instant Growth 🚀
-    </div>
+<div class="timer">
+⏳ Free Access Closing Soon
+</div>
+
+<div class="proof">
+📈 Limited Seats • Active Community
+</div>
+
+<p class="risk">
+⚠ Market investments are subject to risk
+</p>
+
+<!-- CLEAN FOOTER -->
+<div class="footer">
+Powered by 
+<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
+AdsBuild Agency
+</a>
+</div>
 
 </div>
 
